@@ -1,0 +1,10 @@
+erDiagram
+ USER ||--o| VENDOR : owns
+ USER ||--o{ ORDER : places
+ VENDOR ||--o{ PRODUCT : lists
+ VENDOR ||--o{ VENDOR_ORDER : fulfils
+ ORDER ||--|{ VENDOR_ORDER : contains
+ VENDOR_ORDER ||--|{ ORDER_ITEM : contains
+ PRODUCT ||--o{ ORDER_ITEM : referenced_by
+ ORDER ||--o{ PAYMENT_EVENT : records
+ ORDER_ITEM ||--|| RESERVATION : reserves

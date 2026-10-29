@@ -1,0 +1,14 @@
+flowchart TD
+ U[Users] -->|Credentials| A((1 Accounts and approval))
+ A <-->|Read and write| D1[(D1 Users and vendors)]
+ U -->|Queries and edits| C((2 Catalogue and cart))
+ C <-->|Read and write| D2[(D2 Products and carts)]
+ A -->|Identity| C
+ C -->|Cart snapshot| O((3 Checkout and payment))
+ D1 -->|Role and approval| O
+ O <-->|Reserve or release stock| D2
+ O <-->|Read and write| D3[(D3 Orders items reservations events)]
+ O <-->|Payment request and event| P[Payment adapter]
+ O -->|Paid suborders| F((4 Fulfilment and reporting))
+ VA[Vendor and admin] -->|Status and query| F
+ F <-->|Status and reports| D3

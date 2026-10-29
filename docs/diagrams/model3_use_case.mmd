@@ -1,0 +1,22 @@
+flowchart TD
+ C[Customer]
+ V[Vendor]
+ A[Administrator]
+ P[Payment adapter]
+ subgraph S[Marketplace]
+ U1([Browse and manage cart])
+ U2([Checkout and track orders])
+ U3([Review delivered purchase])
+ U4([Manage own catalogue])
+ U5([Fulfil own suborders])
+ U6([Approve vendors and moderate])
+ U7([Review commission reports])
+ end
+ C --- U1
+ C --- U2
+ C --- U3
+ V --- U4
+ V --- U5
+ A --- U6
+ A --- U7
+ P --- U2

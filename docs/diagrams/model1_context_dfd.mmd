@@ -1,0 +1,9 @@
+flowchart TD
+ C[Customer] -->|Cart and address| S((0 Marketplace))
+ S -->|Order status| C
+ V[Vendor] -->|Listings and fulfilment| S
+ S -->|Own suborders| V
+ A[Administrator] -->|Approval and moderation| S
+ S -->|Reports| A
+ S -->|Payment request| P[Payment adapter]
+ P -->|Payment event| S

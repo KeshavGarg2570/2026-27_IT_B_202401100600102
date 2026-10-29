@@ -1,0 +1,22 @@
+sequenceDiagram
+ participant C as Customer
+ participant W as Web application
+ participant D as PostgreSQL
+ participant P as Payment adapter
+ C->>W: Cart, address, idempotency key
+ W->>D: Begin; lock stock; validate eligibility
+ W->>D: Reserve stock; create parent and suborders
+ D-->>W: Commit pending order
+ W->>P: Create payment outside DB transaction
+ P-->>W: Payment reference
+ P->>W: Payment event
+ W->>W: Verify event, amount and currency
+ W->>D: Lock order; deduplicate event ID
+ alt Pending and verified success
+ W->>D: Mark paid and reservations consumed
+ else Pending and failed or expired
+ W->>D: Release reservations exactly once
+ else Late success after release
+ W->>D: Flag reconciliation; no fulfilment
+ end
+ W-->>C: Current order and payment state

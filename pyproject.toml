@@ -1,0 +1,7 @@
+[project]
+name = "multi-vendor-ecommerce-platform"
+version = "0.1.0"
+description = "Requirements, design and starter for a multi-vendor marketplace"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
