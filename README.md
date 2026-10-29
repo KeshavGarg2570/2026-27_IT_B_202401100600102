@@ -1,4 +1,4 @@
-# Multi-Vendor E-Commerce Platform
+<img width="416" height="62" alt="image" src="https://github.com/user-attachments/assets/ffc788d7-93fa-4aa5-a1b5-8734c3c70aa5" /># Multi-Vendor E-Commerce Platform
 
 A proposed marketplace where multiple approved vendors sell through one catalogue. Customers place a consolidated order, vendors fulfil their own suborders, and administrators manage approvals and commission reporting.
 
@@ -51,9 +51,10 @@ The application is planned as a modular monolith. Checkout commits the reservati
 | Member | Roll number | Proposed responsibility |
 |---|---|---|
 | Keshav Garg | 202401100600102 | Repository setup, documentation and integration |
-| Team member 2 — to confirm | To confirm | Accounts, vendor approval and permissions |
-| Team member 3 — to confirm | To confirm | Catalogue, search and stock management |
-| Team member 4 — to confirm | To confirm | Checkout, payment state and fulfilment |
+| Mohit Singh | 202401100600115 |  Accounts, vendor approval and permissions |
+| Ritik Goel  | 202401100600144 |  Catalogue, search and stock management |
+| Gaurav Verma| 202401100600081 | Checkout, payment state and fulfilment |
+| Prashant    | 202401100600129 | Fulfilment, Reviews and Testing  |
 
 This is a suggested four-person allocation; membership and final responsibilities need confirmation. Do not assign commits or completed work to unconfirmed members.
 
